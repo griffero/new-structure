@@ -1,0 +1,10 @@
+# local tool / editor
+.DS_Store
+
+# generated
+team-landing/node_modules/
+team-landing/dist/
+team-landing/.env
+
+# local clones / heavy folders
+fintoc-com-fintoc-rails-20260225142830/
