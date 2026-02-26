@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: new-structure
+    runtime: node
+    plan: starter
+    rootDir: team-landing
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start:prod
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: COMPOSIO_API_KEY
+        sync: false
+      - key: COMPOSIO_CONNECTED_ACCOUNT_ID
+        sync: false
+      - key: COMPOSIO_ENTITY_ID
+        value: default
+      - key: SPREADSHEET_ID
+        value: 1sbYGWOPsZj2uhu06f2JGfR1GYNCTjPE0ekNl-NCPhIc

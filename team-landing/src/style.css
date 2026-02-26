@@ -33,6 +33,121 @@ body {
   padding: 2rem 1.25rem 3rem;
 }
 
+.app-shell {
+  position: relative;
+}
+
+.sidebar-launch {
+  position: fixed;
+  top: 1rem;
+  left: 0.75rem;
+  z-index: 45;
+  border: 3px solid #101010;
+  box-shadow: 6px 6px 0 #101010;
+  background: #101010;
+  color: #f7f7f7;
+  font: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.6rem 0.7rem;
+  cursor: pointer;
+}
+
+.floating-sidebar {
+  position: fixed;
+  top: 4.35rem;
+  left: 0.75rem;
+  width: 300px;
+  max-height: calc(100vh - 5.2rem);
+  border: 3px solid #101010;
+  box-shadow: 8px 8px 0 #101010;
+  background: rgba(250, 247, 240, 0.98);
+  z-index: 40;
+  transform: translateX(calc(-100% - 1rem));
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.floating-sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  border-bottom: 2px solid #101010;
+  background: #fff;
+  padding: 0.65rem 0.75rem;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sidebar-body {
+  padding: 0.75rem;
+  overflow: auto;
+  max-height: calc(100vh - 11rem);
+}
+
+.sidebar-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-meta strong {
+  font-size: 1.15rem;
+}
+
+.sidebar-meta span {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.people-search {
+  width: 100%;
+  border: 2px solid #101010;
+  background: #fff;
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  margin-bottom: 0.55rem;
+}
+
+.people-list {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.person-item {
+  border: 2px solid #101010;
+  background: #fff;
+  padding: 0.45rem 0.5rem;
+}
+
+.person-name {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.person-role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.86;
+  text-transform: uppercase;
+}
+
+.sidebar-body h3 {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+}
+
+.sidebar-body p {
+  margin: 0;
+  font-weight: 600;
+}
+
 .page {
   position: relative;
   display: grid;
@@ -148,6 +263,62 @@ h1 {
   background: #fcfbf8;
 }
 
+.dropzone {
+  min-height: 110px;
+}
+
+.team-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.team-title strong {
+  font-size: 0.9rem;
+}
+
+.team-capacity {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.target-btn {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #101010;
+  background: #fff;
+  font: inherit;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.over-capacity {
+  border-color: #c41212;
+  box-shadow: 6px 6px 0 #c41212;
+  background: #fff3f3;
+}
+
+.team-members {
+  margin-top: 0.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.team-members span {
+  border: 2px solid #101010;
+  background: #fff;
+  padding: 0.12rem 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: none;
+  cursor: grab;
+}
+
 .footer {
   text-align: center;
   font-weight: 800;
@@ -157,6 +328,21 @@ h1 {
 }
 
 @media (max-width: 900px) {
+  .floating-sidebar {
+    top: 4rem;
+    left: 0.75rem;
+    width: min(290px, calc(100vw - 1.5rem));
+    transform: translateX(calc(-100% - 1rem));
+  }
+
+  .floating-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-body {
+    max-height: calc(100vh - 10rem);
+  }
+
   .path {
     grid-template-columns: 1fr;
   }

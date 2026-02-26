@@ -118,3 +118,30 @@ Design a new team structure with very small, functional pods (<=10), only suppor
 - Updated scripts:
   - `npm run dev` now runs web + server concurrently.
   - `npm run build` remains green (with Node engine warning from Vite).
+
+## 2026-02-26 Update: Team states + column G persistence
+- Created spreadsheet sheet `Team_States` listing all valid assignment states (+ target size):
+  - `Sin asignar`
+  - `Movements CL`
+  - `Payments OS Enterprise CL`
+  - `Payments Long-tail Global`
+  - `Payment OS MX`
+  - `HR`, `Legal`, `Finance Global`, `Treasury + Ledger`, `Infra Regulada + Conexiones Bajo Nivel`, `Security`
+  - `Enablers Globales`, `Enablers Locales CL`, `Enablers Locales MX`
+- Set initial state in `People!G` to `Sin asignar` for all 96 people.
+- Implemented backend sync service (`team-landing/server/index.mjs`):
+  - `GET /api/state`: reads `People` + `Team_States`.
+  - `POST /api/move`: persists drag/drop assignment to `People!G{row}`.
+- Frontend now consumes `/api/state` and writes moves via `/api/move`.
+- Verified with live calls:
+  - state load: `states=14`, `people=96`, `sin_asignar=96`
+  - move write test to `People!G` and rollback succeeded (`200 OK`).
+
+## 2026-02-26 Update: UX controls + capacity management
+- Added drag/drop between teams and drop-to-empty-area to move back to `Sin asignar`.
+- Added role emojis in both sidebar and team chips for quick composition scan.
+- Added click-on-empty-space behavior to close the sidebar when not dragging.
+- Added `Final headcount` metric (counts only assigned people; excludes `Sin asignar`).
+- Added per-team target controls (`+` / `-`) that persist to `Team_States!B`.
+- Added over-capacity visual state (team card turns red when `headcount > target`).
+- Removed `Sin asignar` from team card grid (kept as internal state/bucket only).

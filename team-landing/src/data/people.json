@@ -1,0 +1,962 @@
+[
+  {
+    "row": 4,
+    "name": "Agustin Zaldivar",
+    "email": "agustin.zaldivar@fintoc.com",
+    "role": "Business Development Representative",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 5,
+    "name": "Ahinri",
+    "email": "ahinri@fintoc.com",
+    "role": "Ops Engineer Lead",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Payments Long-tail Global",
+    "keep": "INT_REGULATED_CONN"
+  },
+  {
+    "row": 6,
+    "name": "Alba",
+    "email": "alba@fintoc.com",
+    "role": "Key Account Manager",
+    "country": "CL",
+    "area": "Success",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "YES"
+  },
+  {
+    "row": 90,
+    "name": "Alejandro Vazquez",
+    "email": "alejandro.vazquez@fintoc.com",
+    "role": "Legal & Compliance Analyst",
+    "country": "MX",
+    "area": "Legal & Compliance Mx",
+    "team": "Legal",
+    "keep": "YES"
+  },
+  {
+    "row": 7,
+    "name": "Alex Lebleu",
+    "email": "alex@fintoc.com",
+    "role": "Senior Product Designer",
+    "country": "CL",
+    "area": "Product & Design",
+    "team": "Payments Long-tail Global",
+    "keep": "YES"
+  },
+  {
+    "row": 8,
+    "name": "Alfredo",
+    "email": "alfredo@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core",
+    "keep": "YES"
+  },
+  {
+    "row": 9,
+    "name": "Andrés Tagle",
+    "email": "andres.tagle@fintoc.com",
+    "role": "Marketing Designer",
+    "country": "CL",
+    "area": "Marketing",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 10,
+    "name": "Anto Fuenzalida",
+    "email": "antonia.fuenzalida@fintoc.com",
+    "role": "Customer Success Analyst",
+    "country": "CL",
+    "area": "Success",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 11,
+    "name": "Antonia",
+    "email": "antonia@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core",
+    "keep": "YES"
+  },
+  {
+    "row": 12,
+    "name": "Antonia De Martini",
+    "email": "antonia.demartini@fintoc.com",
+    "role": "Business Development Representative",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "YES"
+  },
+  {
+    "row": 13,
+    "name": "Ariel Seisdedos",
+    "email": "ariel@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core",
+    "keep": "YES"
+  },
+  {
+    "row": 14,
+    "name": "Arthur Araújo",
+    "email": "arthur@fintoc.com",
+    "role": "Product Manager Payments",
+    "country": "CL",
+    "area": "Product & Design",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "YES"
+  },
+  {
+    "row": 15,
+    "name": "Belén",
+    "email": "belen@fintoc.com",
+    "role": "Marketing Designer",
+    "country": "CL",
+    "area": "Marketing",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 16,
+    "name": "Benito Palacios",
+    "email": "benito@fintoc.com",
+    "role": "Site Reliability Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Regulated Connections CL",
+    "keep": "INT_REGULATED_CONN"
+  },
+  {
+    "row": 17,
+    "name": "Bruno Tataren Sepulcri",
+    "email": "bruno@fintoc.com",
+    "role": "Head of Growth",
+    "country": "CL",
+    "area": "Marketing",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 18,
+    "name": "Cata González",
+    "email": "catalina.gonzalez@fintoc.com",
+    "role": "Strategy Specialist",
+    "country": "CL",
+    "area": "Strategy",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "YES"
+  },
+  {
+    "row": 19,
+    "name": "Chris",
+    "email": "chris@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "INT_REGULATED_CONN"
+  },
+  {
+    "row": 20,
+    "name": "Clemente Ruiz",
+    "email": "clemente.ruiz@fintoc.com",
+    "role": "Procurador Legal & Compliance",
+    "country": "CL",
+    "area": "Legal & Compliance CL",
+    "team": "Legal",
+    "keep": "YES"
+  },
+  {
+    "row": 21,
+    "name": "Coke",
+    "email": "jorge.delaveau@fintoc.com",
+    "role": "Head of Success",
+    "country": "CL",
+    "area": "Success",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 22,
+    "name": "Cristobal Pinto",
+    "email": "cristobal.pinto@fintoc.com",
+    "role": "Support Specialist",
+    "country": "CL",
+    "area": "Support",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 23,
+    "name": "Cristóbal",
+    "email": "cristobal@fintoc.com",
+    "role": "Founder",
+    "country": "CL",
+    "area": "Founders",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 24,
+    "name": "Daniel Leal",
+    "email": "daniel@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 25,
+    "name": "Danny Fuentes",
+    "email": "danny@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 26,
+    "name": "Debbie Elberg",
+    "email": "deborah@fintoc.com",
+    "role": "Product Manager & Design Lead",
+    "country": "CL",
+    "area": "Product & Design",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "YES"
+  },
+  {
+    "row": 27,
+    "name": "Diego Acevedo",
+    "email": "diego@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 91,
+    "name": "Fausto Sainz",
+    "email": "fausto@fintoc.com",
+    "role": "Payments Strategy Manager",
+    "country": "MX",
+    "area": "Strategy",
+    "team": "Payments Long-tail MX",
+    "keep": "YES"
+  },
+  {
+    "row": 92,
+    "name": "Felipe",
+    "email": "felipe@fintoc.com",
+    "role": "Head of Sales",
+    "country": "MX",
+    "area": "Sales",
+    "team": "Payments Long-tail MX",
+    "keep": "YES"
+  },
+  {
+    "row": 28,
+    "name": "Felipe Campbell",
+    "email": "felipe.campbell@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "INT_REGULATED_CONN"
+  },
+  {
+    "row": 29,
+    "name": "Flo",
+    "email": "florencia@fintoc.com",
+    "role": "Head of People",
+    "country": "CL",
+    "area": "People",
+    "team": "HR",
+    "keep": "YES"
+  },
+  {
+    "row": 30,
+    "name": "Francisca",
+    "email": "francisca.otero@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "CF_PAY_OS_CL_ENT"
+  },
+  {
+    "row": 31,
+    "name": "Francisco Iturriaga",
+    "email": "francisco.iturriaga@fintoc.com",
+    "role": "Business Development Representative",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 32,
+    "name": "Francisco Pérez",
+    "email": "francisco.perez@fintoc.com",
+    "role": "Product Manager Transfers",
+    "country": "CL",
+    "area": "Product & Design",
+    "team": "Transfers CL",
+    "keep": "YES"
+  },
+  {
+    "row": 33,
+    "name": "Frank",
+    "email": "franco.sanllehi@fintoc.com",
+    "role": "Software Engineer | Infra",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 34,
+    "name": "Gaspar Yurich Romano",
+    "email": "gaspar@fintoc.com",
+    "role": "Senior Account Executive",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 35,
+    "name": "Gianfranco",
+    "email": "gianfranco@fintoc.com",
+    "role": "Product Ops Engineer",
+    "country": "CL",
+    "area": "Ops",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 93,
+    "name": "Gonzalo",
+    "email": "gonzalo@fintoc.com",
+    "role": "Product Ops Engineer",
+    "country": "MX",
+    "area": "Ops",
+    "team": "Payment OS MX (Enterprise)",
+    "keep": "CF_PAY_OS_MX"
+  },
+  {
+    "row": 36,
+    "name": "Gonzalo Caballero›",
+    "email": "gonzalo.caballero@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 37,
+    "name": "Ignacio",
+    "email": "ignacio.jelvez@fintoc.com",
+    "role": "Site Reliability Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 38,
+    "name": "Ignacio",
+    "email": "ignacio.fernandez@fintoc.com",
+    "role": "Country Manager Chile",
+    "country": "CL",
+    "area": "Strategy",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 39,
+    "name": "Isa Garretón",
+    "email": "isadora@fintoc.com",
+    "role": "Senior Account Executive",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 40,
+    "name": "Isi Faúndez",
+    "email": "isi@fintoc.com",
+    "role": "Office Manager",
+    "country": "CL",
+    "area": "People",
+    "team": "HR",
+    "keep": "YES"
+  },
+  {
+    "row": 94,
+    "name": "Ivo Morera Andreu",
+    "email": "ivo@fintoc.com",
+    "role": "Account Executive",
+    "country": "MX",
+    "area": "Sales",
+    "team": "Payments Long-tail MX",
+    "keep": "YES"
+  },
+  {
+    "row": 95,
+    "name": "Jimena",
+    "email": "jimena@fintoc.com",
+    "role": "Senior Account Executive",
+    "country": "MX",
+    "area": "Sales",
+    "team": "Payments Long-tail MX",
+    "keep": "YES"
+  },
+  {
+    "row": 41,
+    "name": "Jo Kovacic",
+    "email": "josefa.kovacic@fintoc.com",
+    "role": "Revenue Operations Engineer",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 42,
+    "name": "Joaquín",
+    "email": "joaquin.munoz@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 43,
+    "name": "Jope Varas",
+    "email": "josefina@fintoc.com",
+    "role": "People Partner",
+    "country": "CL",
+    "area": "Sales",
+    "team": "HR",
+    "keep": "YES"
+  },
+  {
+    "row": 44,
+    "name": "Jorge Vives",
+    "email": "jorge.vives@fintoc.com",
+    "role": "Senior Payment Consultant",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 45,
+    "name": "Josefina Brito",
+    "email": "josefina.brito@fintoc.com",
+    "role": "People Specialist",
+    "country": "CL",
+    "area": "People",
+    "team": "HR",
+    "keep": "YES"
+  },
+  {
+    "row": 46,
+    "name": "José Marchant",
+    "email": "jose.marchant@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 47,
+    "name": "Juan Pablo",
+    "email": "juanpablo.ramoneda@fintoc.com",
+    "role": "Sales Manager",
+    "country": "CL",
+    "area": "Sales Manager",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 48,
+    "name": "Juan Pablo",
+    "email": "juanpablo@fintoc.com",
+    "role": "Engineering Manager",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 49,
+    "name": "Julián",
+    "email": "julian@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Regulated Connections CL",
+    "keep": "INT_REGULATED_CONN"
+  },
+  {
+    "row": 50,
+    "name": "Kenneth",
+    "email": "kenneth@fintoc.com",
+    "role": "KAM",
+    "country": "CL",
+    "area": "Success",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 51,
+    "name": "Lucas Del Campo",
+    "email": "lucas.delcampo@fintoc.com",
+    "role": "Payment Consultant",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 52,
+    "name": "Lukas",
+    "email": "cristobal@fintoc.com",
+    "role": "Founder",
+    "country": "CL",
+    "area": "Founders",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 53,
+    "name": "Manu Muñoz",
+    "email": "manuel.munoz@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 54,
+    "name": "Martín Peñaloza",
+    "email": "martin.penaloza@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 55,
+    "name": "Mateo",
+    "email": "mateo@fintoc.com",
+    "role": "Product Ops Engineer",
+    "country": "CL",
+    "area": "Ops",
+    "team": "Ledger & Core CL",
+    "keep": "INT_LEDGER_CORE"
+  },
+  {
+    "row": 56,
+    "name": "Matias Perales",
+    "email": "matias.perales@fintoc.com",
+    "role": "Sales Manager Chile",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 2,
+    "name": "Matías Barra",
+    "email": "matias.barra@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core",
+    "keep": "INT_REGULATED_CONN"
+  },
+  {
+    "row": 57,
+    "name": "Matías Cobián",
+    "email": "matias.cobian@fintoc.com",
+    "role": "Sr Account Executive",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 58,
+    "name": "Matías Torres",
+    "email": "matias.torres@fintoc.com",
+    "role": "Payment Consultant",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 96,
+    "name": "Mireya",
+    "email": "mireya@fintoc.com",
+    "role": "Compliance Lead",
+    "country": "MX",
+    "area": "Legal & Compliance Mx",
+    "team": "Legal",
+    "keep": "YES"
+  },
+  {
+    "row": 59,
+    "name": "Nico",
+    "email": "nicolas@fintoc.com",
+    "role": "Head of Engineering",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 60,
+    "name": "Nicolás Castro",
+    "email": "nicolas.castro@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 61,
+    "name": "Nicolás Cruz",
+    "email": "nicolas.cruz@fintoc.com",
+    "role": "Software Engineer Intern",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 97,
+    "name": "Nicolás Lazo",
+    "email": "nicolas.lazo@fintoc.com",
+    "role": "Account Executive",
+    "country": "MX",
+    "area": "Sales",
+    "team": "Payments Long-tail MX",
+    "keep": "YES"
+  },
+  {
+    "row": 62,
+    "name": "Orlando Andrade",
+    "email": "orlando@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 63,
+    "name": "Oscar",
+    "email": "oscar@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 64,
+    "name": "Pablo Heredia",
+    "email": "pablo.heredia@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 65,
+    "name": "Pablo Molina",
+    "email": "pablo@fintoc.com",
+    "role": "Product Ops Engineer",
+    "country": "CL",
+    "area": "Ops",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 66,
+    "name": "Pablo Vergara",
+    "email": "pablo.vergara@fintoc.com",
+    "role": "Sr. Product Ops",
+    "country": "CL",
+    "area": "Ops",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 67,
+    "name": "Paula",
+    "email": "paula.yoma@fintoc.com",
+    "role": "Product Ops Engineer",
+    "country": "CL",
+    "area": "Ops",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 68,
+    "name": "Paula Grune",
+    "email": "paula.grune@fintoc.com",
+    "role": "Software Engineer Intern",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 69,
+    "name": "Pauli",
+    "email": "paulina@fintoc.com",
+    "role": "Engineering Manager",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 70,
+    "name": "Pedro",
+    "email": "pedro.bahamondes@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 71,
+    "name": "Pedro",
+    "email": "pedro@fintoc.com",
+    "role": "Sr Content Manager",
+    "country": "CL",
+    "area": "Marketing",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 3,
+    "name": "Pedro Ariztía",
+    "email": "pedro.ariztia@fintoc.com",
+    "role": "Business Development Intern",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payment OS CL (Enterprise)",
+    "keep": "YES"
+  },
+  {
+    "row": 72,
+    "name": "Piero",
+    "email": "piero@fintoc.com",
+    "role": "Site Reliability Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 73,
+    "name": "Pili",
+    "email": "pilar@fintoc.com",
+    "role": "Financial Operations Specialist",
+    "country": "CL",
+    "area": "Finance & Admin",
+    "team": "HR",
+    "keep": "YES"
+  },
+  {
+    "row": 74,
+    "name": "Poli",
+    "email": "florencia.rostion@fintoc.com",
+    "role": "Content Manager",
+    "country": "CL",
+    "area": "Marketing",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 75,
+    "name": "Raimundo (mundi)",
+    "email": "raimundo@fintoc.com",
+    "role": "Legal & Compliance Lead",
+    "country": "CL",
+    "area": "Legal & Compliance CL",
+    "team": "Legal",
+    "keep": "YES"
+  },
+  {
+    "row": 76,
+    "name": "Raimundo Sandoval",
+    "email": "raimundo.sandoval@fintoc.com",
+    "role": "Product Operations Engineer",
+    "country": "CL",
+    "area": "Ops",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 77,
+    "name": "Ramiro",
+    "email": "ramiro@fintoc.com",
+    "role": "Payment Consultant",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 78,
+    "name": "Rudy Jerez",
+    "email": "rudyard@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 79,
+    "name": "Simón Oyaneder",
+    "email": "simon@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "CF_PAY_OS_CL_ENT"
+  },
+  {
+    "row": 80,
+    "name": "Sole",
+    "email": "soledad@fintoc.com",
+    "role": "Support Specialist",
+    "country": "CL",
+    "area": "Support",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 81,
+    "name": "Tomás Larrain",
+    "email": "tomas.larrain@fintoc.com",
+    "role": "Engineering Manager",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 82,
+    "name": "Tomás Ozzano",
+    "email": "tomas.ozzano@fintoc.com",
+    "role": "Finance Manager",
+    "country": "CL",
+    "area": "Finance & Admin",
+    "team": "HR",
+    "keep": "YES"
+  },
+  {
+    "row": 83,
+    "name": "Verner",
+    "email": "verner@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 84,
+    "name": "Vicente",
+    "email": "vicente@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 85,
+    "name": "Vicente Larraín",
+    "email": "vicente.larrain@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  },
+  {
+    "row": 86,
+    "name": "Vicente Soto",
+    "email": "vicente.soto@fintoc.com",
+    "role": "Information Security Lead",
+    "country": "CL",
+    "area": "Legal & Compliance CL",
+    "team": "Legal",
+    "keep": "YES"
+  },
+  {
+    "row": 87,
+    "name": "Yiching Tan Wu",
+    "email": "yiching@fintoc.com",
+    "role": "Business Development Intern",
+    "country": "CL",
+    "area": "Sales",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 88,
+    "name": "Yisus / Jesu",
+    "email": "jesus@fintoc.com",
+    "role": "Senior Product Designer",
+    "country": "CL",
+    "area": "Product & Design",
+    "team": "Payments Long-tail CL",
+    "keep": "YES"
+  },
+  {
+    "row": 89,
+    "name": "Zuri",
+    "email": "zuri@fintoc.com",
+    "role": "Software Engineer",
+    "country": "CL",
+    "area": "Engineering",
+    "team": "Ledger & Core CL",
+    "keep": "YES"
+  }
+]
