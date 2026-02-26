@@ -21,6 +21,8 @@ const draggingRow = ref<number | null>(null);
 const loading = ref(false);
 const saving = ref(false);
 const errorMsg = ref("");
+const expandedTeams = ref<Record<string, boolean>>({});
+const PREVIEW_MEMBER_COUNT = 5;
 
 const store = reactive<{
   people: Person[];
@@ -118,6 +120,28 @@ function roleEmoji(role: string) {
   if (r.includes("ops")) return "📦";
   if (r.includes("founder") || r.includes("manager") || r.includes("head")) return "🧭";
   return "👤";
+}
+
+function isTeamExpanded(team: string) {
+  return Boolean(expandedTeams.value[team]);
+}
+
+function toggleTeamExpanded(team: string) {
+  expandedTeams.value[team] = !expandedTeams.value[team];
+}
+
+function getMembers(team: string) {
+  return peopleByTeam.value[team] || [];
+}
+
+function visibleMembers(team: string) {
+  const members = getMembers(team);
+  return isTeamExpanded(team) ? members : members.slice(0, PREVIEW_MEMBER_COUNT);
+}
+
+function hiddenMembers(team: string) {
+  const members = getMembers(team);
+  return members.slice(PREVIEW_MEMBER_COUNT);
 }
 
 const filteredPeople = computed(() => {
@@ -299,7 +323,7 @@ function onPageClick(event: MouseEvent) {
           </div>
           <div class="team-members">
             <span
-              v-for="member in (peopleByTeam[state.name] || []).slice(0, 5)"
+              v-for="member in visibleMembers(state.name)"
               :key="member.row"
               draggable="true"
               @dragstart="onDragStart($event, member.row)"
@@ -307,9 +331,21 @@ function onPageClick(event: MouseEvent) {
             >
               {{ roleEmoji(member.role) }} {{ member.name }}
             </span>
-            <span v-if="(peopleByTeam[state.name]?.length || 0) > 5">
-              +{{ (peopleByTeam[state.name]?.length || 0) - 5 }} más
-            </span>
+            <button
+              v-if="!isTeamExpanded(state.name) && hiddenMembers(state.name).length > 0"
+              class="show-more-btn"
+              :title="hiddenMembers(state.name).map((m) => m.name).join(', ')"
+              @click.stop="toggleTeamExpanded(state.name)"
+            >
+              +{{ hiddenMembers(state.name).length }} más
+            </button>
+            <button
+              v-if="isTeamExpanded(state.name) && getMembers(state.name).length > PREVIEW_MEMBER_COUNT"
+              class="show-more-btn"
+              @click.stop="toggleTeamExpanded(state.name)"
+            >
+              Ocultar
+            </button>
           </div>
         </article>
       </section>

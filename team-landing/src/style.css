@@ -339,6 +339,16 @@ h1 {
   cursor: grab;
 }
 
+.show-more-btn {
+  border: 2px solid #101010;
+  background: #fff;
+  padding: 0.12rem 0.35rem;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .footer {
   text-align: center;
   font-weight: 800;
