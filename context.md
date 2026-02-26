@@ -145,3 +145,9 @@ Design a new team structure with very small, functional pods (<=10), only suppor
 - Added per-team target controls (`+` / `-`) that persist to `Team_States!B`.
 - Added over-capacity visual state (team card turns red when `headcount > target`).
 - Removed `Sin asignar` from team card grid (kept as internal state/bucket only).
+
+## 2026-02-26 Update: Team card header overflow fix
+- Fixed layout bug in long team names (e.g. `Infra Regulada + Conexiones Bajo Nivel`) where capacity controls wrapped/broke.
+- `team-title` now uses robust flex layout with a non-shrinking capacity block and wrapped title text.
+- Capacity counter now has fixed minimum width and right alignment to prevent `0 · 3` line breaks.
+- Also cleaned two unused vars in `App.vue` so `npm run build` passes again.

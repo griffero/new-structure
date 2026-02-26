@@ -288,7 +288,9 @@ function onPageClick(event: MouseEvent) {
           @drop.stop="onDrop(state.name)"
         >
           <div class="team-title">
-            <span>{{ teamEmoji(state.name) }} {{ state.name }}</span>
+            <span class="team-name" :title="`${teamEmoji(state.name)} ${state.name}`">
+              {{ teamEmoji(state.name) }} {{ state.name }}
+            </span>
             <div class="team-capacity">
               <button class="target-btn" @click.stop="changeTarget(state, -1)">-</button>
               <strong>{{ peopleByTeam[state.name]?.length || 0 }} · {{ state.target || "-" }}</strong>

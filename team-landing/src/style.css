@@ -279,11 +279,14 @@ h1 {
   white-space: nowrap;
 }
 
-.team-title > span:first-child {
+.team-name {
   flex: 1 1 auto;
   min-width: 0;
   line-height: 1.15;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: help;
 }
 
 .team-capacity {
