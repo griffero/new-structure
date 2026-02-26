@@ -85,8 +85,8 @@ const peopleByTeam = computed<Record<string, Person[]>>(() => {
 });
 
 const totalHeadcount = computed(() => store.people.length);
-const finalHeadcount = computed(
-  () => store.people.filter((p) => p.team !== "Sin asignar").length,
+const finalHeadcount = computed(() =>
+  store.states.reduce((sum, s) => sum + (numericTarget(s.target) ?? 0), 0),
 );
 const visibleStates = computed(() =>
   store.states.filter((s) => s.name !== "Sin asignar"),
@@ -153,7 +153,7 @@ async function onDrop(team: string) {
   if (person) person.team = team;
 
   try {
-    const res = await apiFetch("/move", {
+    await apiFetch("/move", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ row, team }),
@@ -175,7 +175,7 @@ async function changeTarget(state: TeamState, delta: number) {
   saving.value = true;
   errorMsg.value = "";
   try {
-    const res = await apiFetch("/target", {
+    await apiFetch("/target", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ row: state.row, target: next }),
