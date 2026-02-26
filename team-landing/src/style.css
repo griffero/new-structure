@@ -316,6 +316,19 @@ h1 {
   padding: 0;
 }
 
+.rename-btn {
+  height: 24px;
+  border: 2px solid #101010;
+  background: #fff;
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 0.35rem;
+}
+
 .over-capacity {
   border-color: #c41212;
   box-shadow: 6px 6px 0 #c41212;

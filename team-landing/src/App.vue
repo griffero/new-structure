@@ -122,6 +122,15 @@ function roleEmoji(role: string) {
   return "👤";
 }
 
+function normalizeName(value: string) {
+  return (value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function isTeamExpanded(team: string) {
   return Boolean(expandedTeams.value[team]);
 }
@@ -207,6 +216,58 @@ async function changeTarget(state: TeamState, delta: number) {
   } catch (err) {
     state.target = prev;
     errorMsg.value = `Target update failed: ${(err as Error).message}`;
+  } finally {
+    saving.value = false;
+  }
+}
+
+async function renameTeam(state: TeamState) {
+  if (saving.value) return;
+  const oldName = state.name;
+  const typed = window.prompt("Nuevo nombre del equipo", oldName);
+  if (typed === null) return;
+
+  const newName = typed.trim();
+  if (!newName || newName === oldName) return;
+  if (normalizeName(newName) === normalizeName("Sin asignar")) {
+    errorMsg.value = "Ese nombre no esta permitido.";
+    return;
+  }
+  const conflict = store.states.find(
+    (s) => s.row !== state.row && normalizeName(s.name) === normalizeName(newName),
+  );
+  if (conflict) {
+    errorMsg.value = "Ya existe un equipo con ese nombre.";
+    return;
+  }
+
+  saving.value = true;
+  errorMsg.value = "";
+  state.name = newName;
+  for (const person of store.people) {
+    if (person.team === oldName) person.team = newName;
+  }
+  if (expandedTeams.value[oldName]) {
+    expandedTeams.value[newName] = expandedTeams.value[oldName];
+    delete expandedTeams.value[oldName];
+  }
+
+  try {
+    await apiFetch("/rename-team", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ row: state.row, oldName, newName }),
+    });
+  } catch (err) {
+    state.name = oldName;
+    for (const person of store.people) {
+      if (person.team === newName) person.team = oldName;
+    }
+    if (expandedTeams.value[newName]) {
+      expandedTeams.value[oldName] = expandedTeams.value[newName];
+      delete expandedTeams.value[newName];
+    }
+    errorMsg.value = `Rename failed: ${(err as Error).message}`;
   } finally {
     saving.value = false;
   }
@@ -316,6 +377,7 @@ function onPageClick(event: MouseEvent) {
               {{ teamEmoji(state.name) }} {{ state.name }}
             </span>
             <div class="team-capacity">
+              <button class="rename-btn" @click.stop="renameTeam(state)">Editar</button>
               <button class="target-btn" @click.stop="changeTarget(state, -1)">-</button>
               <strong>{{ peopleByTeam[state.name]?.length || 0 }} · {{ state.target || "-" }}</strong>
               <button class="target-btn" @click.stop="changeTarget(state, 1)">+</button>

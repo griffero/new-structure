@@ -132,6 +132,65 @@ app.post("/api/target", async (req, res) => {
   }
 });
 
+app.post("/api/rename-team", async (req, res) => {
+  const { row, oldName, newName } = req.body || {};
+  const teamRow = Number(row);
+  const sourceName = String(oldName || "").trim();
+  const nextName = String(newName || "").trim();
+
+  if (!teamRow || !sourceName || !nextName) {
+    return res.status(400).json({ error: "row, oldName and newName are required" });
+  }
+  if (normalize(nextName) === normalize("Sin asignar")) {
+    return res.status(400).json({ error: "invalid team name" });
+  }
+
+  try {
+    const check = await run("GOOGLESHEETS_BATCH_GET", {
+      spreadsheet_id: SPREADSHEET_ID,
+      ranges: ["Team_States!A1:A250"],
+    });
+    const rows = check.valueRanges?.[0]?.values || [];
+    const normalizedNext = normalize(nextName);
+    const duplicate = rows
+      .slice(1)
+      .some((r, i) => i + 2 !== teamRow && normalize(r[0] || "") === normalizedNext);
+    if (duplicate) return res.status(409).json({ error: "team name already exists" });
+
+    await run("GOOGLESHEETS_BATCH_UPDATE", {
+      spreadsheet_id: SPREADSHEET_ID,
+      sheet_name: "Team_States",
+      first_cell_location: `A${teamRow}`,
+      valueInputOption: "USER_ENTERED",
+      values: [[nextName]],
+    });
+
+    const peopleCol = await run("GOOGLESHEETS_BATCH_GET", {
+      spreadsheet_id: SPREADSHEET_ID,
+      ranges: ["People!G2:G400"],
+    });
+    const values = peopleCol.valueRanges?.[0]?.values || [];
+    const oldNormalized = normalize(sourceName);
+
+    for (let i = 0; i < values.length; i += 1) {
+      const current = values[i]?.[0] || "";
+      if (normalize(current) !== oldNormalized) continue;
+      const sheetRow = i + 2;
+      await run("GOOGLESHEETS_BATCH_UPDATE", {
+        spreadsheet_id: SPREADSHEET_ID,
+        sheet_name: "People",
+        first_cell_location: `G${sheetRow}`,
+        valueInputOption: "USER_ENTERED",
+        values: [[nextName]],
+      });
+    }
+
+    res.json({ ok: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.use(express.static(DIST_DIR));
 app.use((_req, res) => {
   res.sendFile(path.join(DIST_DIR, "index.html"));
