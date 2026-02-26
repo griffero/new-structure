@@ -30,6 +30,19 @@ const store = reactive<{
   states: [],
 });
 
+async function apiFetch(path: string, init?: RequestInit) {
+  try {
+    const res = await fetch(`/api${path}`, init);
+    if (res.ok) return res;
+    const txt = await res.text();
+    throw new Error(txt || `HTTP ${res.status}`);
+  } catch (_err) {
+    const res = await fetch(`http://127.0.0.1:8787/api${path}`, init);
+    if (!res.ok) throw new Error(await res.text());
+    return res;
+  }
+}
+
 const teamEmoji = (name: string) => {
   const t = name.toLowerCase();
   if (t.includes(" cl")) return "🇨🇱";
@@ -41,8 +54,7 @@ async function fetchState() {
   loading.value = true;
   errorMsg.value = "";
   try {
-    const res = await fetch("/api/state");
-    if (!res.ok) throw new Error(await res.text());
+    const res = await apiFetch("/state");
     const data = await res.json();
     store.people = data.people || [];
     store.states = data.states || [];
@@ -117,8 +129,12 @@ const filteredPeople = computed(() => {
   );
 });
 
-function onDragStart(row: number) {
+function onDragStart(event: DragEvent, row: number) {
   draggingRow.value = row;
+  if (event.dataTransfer) {
+    event.dataTransfer.setData("text/plain", String(row));
+    event.dataTransfer.effectAllowed = "move";
+  }
 }
 
 function onDragEnd() {
@@ -137,12 +153,11 @@ async function onDrop(team: string) {
   if (person) person.team = team;
 
   try {
-    const res = await fetch("/api/move", {
+    const res = await apiFetch("/move", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ row, team }),
     });
-    if (!res.ok) throw new Error(await res.text());
   } catch (err) {
     if (person) person.team = previous;
     errorMsg.value = `Move failed: ${(err as Error).message}`;
@@ -160,12 +175,11 @@ async function changeTarget(state: TeamState, delta: number) {
   saving.value = true;
   errorMsg.value = "";
   try {
-    const res = await fetch("/api/target", {
+    const res = await apiFetch("/target", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ row: state.row, target: next }),
     });
-    if (!res.ok) throw new Error(await res.text());
   } catch (err) {
     state.target = prev;
     errorMsg.value = `Target update failed: ${(err as Error).message}`;
@@ -186,7 +200,7 @@ function onPageClick(event: MouseEvent) {
 </script>
 
 <template>
-  <div class="app-shell">
+  <div class="app-shell" @dragover.prevent @drop="onDrop('Sin asignar')">
     <button class="sidebar-launch" @click="sidebarOpen = !sidebarOpen">
       {{ sidebarOpen ? "Cerrar" : "People" }}
     </button>
@@ -211,7 +225,7 @@ function onPageClick(event: MouseEvent) {
             :key="person.row"
             class="person-item"
             draggable="true"
-            @dragstart="onDragStart(person.row)"
+            @dragstart="onDragStart($event, person.row)"
             @dragend="onDragEnd"
           >
             <div class="person-name">{{ roleEmoji(person.role) }} {{ person.name }}</div>
@@ -221,7 +235,7 @@ function onPageClick(event: MouseEvent) {
       </div>
     </aside>
 
-    <div class="page" @click="onPageClick" @dragover="allowDrop" @drop="onDrop('Sin asignar')">
+    <div class="page" @click="onPageClick">
       <div class="noise"></div>
       <div class="top-fade"></div>
       <header class="hero block">
@@ -286,7 +300,7 @@ function onPageClick(event: MouseEvent) {
               v-for="member in (peopleByTeam[state.name] || []).slice(0, 5)"
               :key="member.row"
               draggable="true"
-              @dragstart="onDragStart(member.row)"
+              @dragstart="onDragStart($event, member.row)"
               @dragend="onDragEnd"
             >
               {{ roleEmoji(member.role) }} {{ member.name }}
